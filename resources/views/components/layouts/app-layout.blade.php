@@ -9,6 +9,8 @@
     <title>CRUD</title>
 </head>
 <body>
+    <div class="orb"></div>
+    <div class="spark"></div>
     {{$slot}}
     <script src="{{$js}}"></script>
     <script src="{{asset('js/universal.js')}}"></script>

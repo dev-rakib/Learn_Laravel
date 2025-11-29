@@ -6,17 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class AppLayout extends Component
+class PostTable extends Component
 {
     /**
      * Create a new component instance.
      */
-    public $css;
-    public $js;
-    public function __construct($css=null, $js=null)
+    public function __construct()
     {
-        $this->css = $css;
-        $this->js = $js;
+        //
     }
 
     /**
@@ -24,6 +21,6 @@ class AppLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layouts.app-layout');
+        return view('components.tables.post-table');
     }
 }

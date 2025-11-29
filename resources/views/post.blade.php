@@ -1,6 +1,4 @@
 <x-app-layout css="{{asset('css/post.css')}}" js="{{asset('js/universal.js')}}">
-    <div class="orb"></div>
-    <div class="spark"></div>
     <header>
         <div>
             <h2>Post</h2>
