@@ -11,9 +11,14 @@ class Post extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $action, public string $namevalue, public string $descvalue )
+    public $action;
+    public $namevalue;
+    public $descvalue;
+    public function __construct($action=null,$namevalue=null,$descvalue=null )
     {
-        //
+        $this->action=$action;
+        $this->namevalue=$namevalue;
+        $this->descvalue=$descvalue;
     }
 
     /**

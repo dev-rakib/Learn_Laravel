@@ -11,9 +11,14 @@ class Header extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public $NavName,public $NavLink,public $LinkName)
+    public $NavName;
+    public $NavLink;
+    public $LinkName;
+    public function __construct($NavName=null,$NavLink=null,$LinkName=null)
     {
-        //
+        $this->NavName=$NavName;
+        $this->NavLink=$NavLink;
+        $this->LinkName=$LinkName;
     }
 
     /**
