@@ -60,12 +60,20 @@ class PostController extends Controller
         
 
         $post->save();
-        flash('Your changes have been saved!');
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success','Post created Successfully!');;
     }
     public function deletepost($id){
-        $post = Post::findorfail($id);
+        $post = Post::findOrFail($id);
+
+        // Delete image from public/images folder
+        if ($post->image && file_exists(public_path('images/' . $post->image))) {
+            unlink(public_path('images/' . $post->image));
+        }
+
+        // Delete database row
         $post->delete();
+
         return redirect()->route('home')->with('success','Post deleted Successfully!');
     }
+
 }
